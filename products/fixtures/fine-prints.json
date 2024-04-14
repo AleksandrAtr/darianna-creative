@@ -1,0 +1,203 @@
+[
+    {
+      "model": "products.product",
+      "pk": 1,
+      "fields": {
+        "category": 1,
+        "sku": "ARCHPRINT001",
+        "name": "Architectural Print",
+        "description": "Architectural print in various sizes.",
+        "rating": null,
+        "image_url": "https://example.com/architectural_print.jpg",
+        "type": "artsale",
+        "image": "b1.jpg"
+      }
+    },
+    {
+      "model": "products.artsale",
+      "pk": 1,
+      "fields": {
+        "product": 1,
+        "price": "100.00",
+        "size": "6x9"
+      }
+    },
+    {
+      "model": "products.artsale",
+      "pk": 2,
+      "fields": {
+        "product": 1,
+        "price": "150.00",
+        "size": "11x17"
+      }
+    },
+    {
+      "model": "products.artsale",
+      "pk": 3,
+      "fields": {
+        "product": 1,
+        "price": "250.00",
+        "size": "23x35"
+      }
+    },
+    {
+      "model": "products.artsale",
+      "pk": 4,
+      "fields": {
+        "product": 1,
+        "price": "50.00",
+        "size": "polaroid"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 2,
+      "fields": {
+        "category": 1,
+        "sku": "ARCHPRINT002",
+        "name": "Urban Architecture Print",
+        "description": "Urban architectural print in various sizes.",
+        "rating": null,
+        "image_url": "https://example.com/urban_architecture_print.jpg",
+        "type": "artsale",
+        "image": "b2.jpg"
+      }
+    },
+    {
+      "model": "products.artsale",
+      "pk": 5,
+      "fields": {
+        "product": 2,
+        "price": "120.00",
+        "size": "6x9"
+      }
+    },
+    {
+      "model": "products.artsale",
+      "pk": 6,
+      "fields": {
+        "product": 2,
+        "price": "180.00",
+        "size": "11x17"
+      }
+    },
+    {
+      "model": "products.artsale",
+      "pk": 7,
+      "fields": {
+        "product": 2,
+        "price": "280.00",
+        "size": "23x35"
+      }
+    },
+    {
+      "model": "products.artsale",
+      "pk": 8,
+      "fields": {
+        "product": 2,
+        "price": "60.00",
+        "size": "polaroid"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 3,
+      "fields": {
+        "category": 1,
+        "sku": "ARCHPRINT003",
+        "name": "Modern Architecture Print",
+        "description": "Modern architectural print in various sizes.",
+        "rating": null,
+        "image_url": "https://example.com/modern_architecture_print.jpg",
+        "type": "artsale",
+        "image": "b3.jpg"
+      }
+    },
+    {
+      "model": "products.artsale",
+      "pk": 9,
+      "fields": {
+        "product": 3,
+        "price": "110.00",
+        "size": "6x9"
+      }
+    },
+    {
+      "model": "products.artsale",
+      "pk": 10,
+      "fields": {
+        "product": 3,
+        "price": "170.00",
+        "size": "11x17"
+      }
+    },
+    {
+      "model": "products.artsale",
+      "pk": 11,
+      "fields": {
+        "product": 3,
+        "price": "270.00",
+        "size": "23x35"
+      }
+    },
+    {
+      "model": "products.artsale",
+      "pk": 12,
+      "fields": {
+        "product": 3,
+        "price": "55.00",
+        "size": "polaroid"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 4,
+      "fields": {
+        "category": 1,
+        "sku": "ARCHPRINT004",
+        "name": "Classic Architecture Print",
+        "description": "Classic architectural print in various sizes.",
+        "rating": null,
+        "image_url": "https://example.com/classic_architecture_print.jpg",
+        "type": "artsale",
+        "image": "b4.jpg"
+      }
+    },
+    {
+      "model": "products.artsale",
+      "pk": 13,
+      "fields": {
+        "product": 4,
+        "price": "130.00",
+        "size": "6x9"
+      }
+    },
+    {
+      "model": "products.artsale",
+      "pk": 14,
+      "fields": {
+        "product": 4,
+        "price": "200.00",
+        "size": "11x17"
+      }
+    },
+    {
+      "model": "products.artsale",
+      "pk": 15,
+      "fields": {
+        "product": 4,
+        "price": "300.00",
+        "size": "23x35"
+      }
+    },
+    {
+      "model": "products.artsale",
+      "pk": 16,
+      "fields": {
+        "product": 4,
+        "price": "65.00",
+        "size": "polaroid"
+      }
+    }
+  ]
+  

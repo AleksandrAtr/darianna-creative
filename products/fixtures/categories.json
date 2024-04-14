@@ -1,0 +1,42 @@
+[
+  {
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+      "name": "print_architecture",
+      "friendly_name": "Black & White Architecture"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 2,
+    "fields": {
+      "name": "print_landscape",
+      "friendly_name": "Landscape photography"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 3,
+    "fields": {
+      "name": "print_people",
+      "friendly_name": "People"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 4,
+    "fields": {
+      "name": "workshops",
+      "friendly_name": "Photography Workshops"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 5,
+    "fields": {
+      "name": "photo_studio",
+      "friendly_name": "Studio Headshots"
+    }
+  }
+]
