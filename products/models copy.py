@@ -57,7 +57,7 @@ class ArtSale(models.Model):
         ('23x35', '23 by 35'),
         ('polaroid', 'Polaroid'),
     )
-    id = models.AutoField(primary_key=True)
+
     product = models.ForeignKey(Product, related_name='art_sales', 
                                 on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=6, decimal_places=2)
@@ -69,7 +69,6 @@ class PhotographySession(models.Model):
         ('120MIN', 'Extended Portrait Session (120 minutes)'),
         ('360MIN', 'Intensive Portrait Session (360 minutes)'),
     )
-    id = models.AutoField(primary_key=True)
     product = models.ForeignKey(Product, related_name='photography_sessions', 
                                on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=6, decimal_places=2)
@@ -82,7 +81,7 @@ class Workshop(models.Model):
         ('ONE-DAY', 'One-Day Workshop'),
         ('TWO-DAY', 'Two-Day Workshop'),
     )
-    id = models.AutoField(primary_key=True)
+    
     product = models.ForeignKey(Product, related_name='workshops', 
                                 on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=6, decimal_places=2)
