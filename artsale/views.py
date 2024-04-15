@@ -3,10 +3,29 @@ from products.models import Product, Category
 from django.db.models import Q
 # Create your views here.
 
-
 def artsale_products(request):
+    """
+    View function to display products belonging to print categories in the art 
+    sale section.
+
+    Retrieves the categories for prints, filters products belonging to those 
+    categories,
+    and passes the filtered products to the template context.
+
+    Args:
+        request: HttpRequest object representing the request made by the user.
+
+    Returns:
+        HttpResponse: Response containing the rendered template with the 
+        filtered products.
+
+    Raises:
+        Category.DoesNotExist: If any of the required categories does not 
+        exist in the database.
+    """
     # Get the categories for prints
-    print_architecture_category = Category.objects.get(name='print_architecture')
+    print_architecture_category = Category.objects.get(
+        name='print_architecture')
     print_landscape_category = Category.objects.get(name='print_landscape')
     print_people_category = Category.objects.get(name='print_people')
 

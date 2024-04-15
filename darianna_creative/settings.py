@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'products',
     'headshots',
     'artsale',
+    'workshops',
 ]
 
 MIDDLEWARE = [
