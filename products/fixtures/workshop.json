@@ -1,5 +1,13 @@
 [
   {
+    "model": "products.category",
+    "pk": 4,
+    "fields": {
+      "name": "Workshops",
+      "friendly_name": "Workshops"
+    }
+  },
+  {
     "model": "products.product",
     "pk": 8,
     "fields": {
@@ -7,19 +15,11 @@
       "sku": "WORKSHOP001",
       "name": "Half-Day Workshop",
       "description": "Half-day photography workshop.",
-      "rating": null,
+      "rating": 5,
       "image_url": "https://example.com/half_day_workshop.jpg",
-      "type": "workshop",
-      "image": "w1.png"
-    }
-  },
-  {
-    "model": "products.workshop",
-    "pk": 1,
-    "fields": {
-      "product": 8,
+      "image": "w1.png",
       "price": "75.00",
-      "session_type": "HALF-DAY"
+      "has_size": false
     }
   },
   {
@@ -30,19 +30,11 @@
       "sku": "WORKSHOP002",
       "name": "One-Day Workshop",
       "description": "One-day photography workshop.",
-      "rating": null,
+      "rating": 5,
       "image_url": "https://example.com/one_day_workshop.jpg",
-      "type": "workshop",
-      "image": "w2.png"
-    }
-  },
-  {
-    "model": "products.workshop",
-    "pk": 2,
-    "fields": {
-      "product": 9,
+      "image": "w2.png",
       "price": "150.00",
-      "session_type": "ONE-DAY"
+      "has_size": false
     }
   },
   {
@@ -53,19 +45,11 @@
       "sku": "WORKSHOP003",
       "name": "Two-Day Workshop",
       "description": "Two-day photography workshop.",
-      "rating": null,
+      "rating": 5,
       "image_url": "https://example.com/two_day_workshop.jpg",
-      "type": "workshop",
-      "image": "w3.png"
-    }
-  },
-  {
-    "model": "products.workshop",
-    "pk": 3,
-    "fields": {
-      "product": 10,
+      "image": "w3.png",
       "price": "250.00",
-      "session_type": "TWO-DAY"
+      "has_size": false
     }
   }
 ]
