@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from products.models import Product, Category
+from django.contrib import messages
 from django.db.models import Q
 # Create your views here.
 
@@ -23,6 +24,8 @@ def artsale_products(request):
         Category.DoesNotExist: If any of the required categories does not 
         exist in the database.
     """
+    
+    
     # Get the categories for prints
     print_architecture_category = Category.objects.get(
         name='print_architecture')
@@ -35,10 +38,22 @@ def artsale_products(request):
         Q(category=print_landscape_category) |
         Q(category=print_people_category)
     )
+    
+    # Check for search query
+    query = request.GET.get('q')
+    if query:
+        # Check if query is empty after stripping whitespace
+        if not query.strip():  
+            messages.error(request, "You didn't enter any search criteria!")
+            return redirect(reverse('artsale'))
+        
+        queries = Q(name__icontains=query) | Q(description__icontains=query)
+        print_products = print_products.filter(queries)
 
     # Pass the filtered products to the template context
     context = {
-        'products': print_products
+        'products': print_products,
+        'search_term': query,
     }
 
     # Render the template with the filtered products
