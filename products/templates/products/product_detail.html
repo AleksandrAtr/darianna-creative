@@ -7,6 +7,7 @@
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="row">
+        <!-- Product detail section -->
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
                 {% if product.image %}
@@ -31,7 +32,7 @@
                 {% endif %}
                 <p class="mt-3">{{ product.description }}</p>
 
-                <!-- Bag items -->
+                <!-- Bag section -->
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
@@ -59,6 +60,7 @@
             </div>
         </div>
     </div>
+    <!-- Define a JavaScript function to navigate to the previous page   -->
     <script>
         function goBack() {
             window.history.back();
