@@ -1,4 +1,5 @@
 from django.shortcuts import get_object_or_404
+from django.conf import settings
 from products.models import Product
 
 def bag_contents(request):
@@ -15,7 +16,7 @@ def bag_contents(request):
     bag_items = []  # List to store items in the bag
     total = 0  # Total price of items in the bag
     product_count = 0  # Number of products in the bag
-    delivery = 0  # Delivery cost
+    delivery = settings.STANDARD_DELIVERY  # Delivery cost
     
     # Retrieve the 'bag' dictionary from the session, 
     # or initialize an empty dictionary if it doesn't exist
