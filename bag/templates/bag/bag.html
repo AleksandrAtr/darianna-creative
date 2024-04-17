@@ -88,8 +88,11 @@
                                             </div>
                                         </form>
                                         <!-- Update bag functionality -->
-                                        <a class="update-link text-info"><small>Update</small></a>
-                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
+                                       
+                                                <!-- Update link -->
+                                        <a class="btn btn-sm btn-outline-dark mt-2 px-2 py-1 float-start update-link"><small>Update</small></a>
+                                        <a class="btn btn-sm btn-outline-dark mt-2 px-2 py-1 float-end remove-item" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
+                         
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
