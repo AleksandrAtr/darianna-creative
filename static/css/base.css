@@ -11,6 +11,7 @@ body {
     font-family: "Roboto Mono", monospace;
 }
 
+
 .p-text {
     margin: 5px 0 5px 0;
 }
@@ -22,6 +23,19 @@ body {
     min-width: 100%;
     background: black;
 }
+
+/* Background overlay */
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -48,6 +62,12 @@ body {
 .btn-black {
     background: black;
     color: white;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
 }
 
 .shop-now-button:hover,
@@ -104,6 +124,8 @@ body {
 .navbar-brand {
     font-size: 2.25rem;
 }
+
+
 
 /* -------------------------------- Media Queries */
 
