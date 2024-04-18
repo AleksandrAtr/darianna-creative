@@ -1,20 +1,10 @@
+
 from django import forms
 from .models import Order
 
+
 class OrderForm(forms.ModelForm):
-    """
-    Form for creating or updating an Order.
-
-    Inherits from Django's ModelForm class and specifies the Order model and fields.
-
-    Attributes:
-        Meta: Inner class to specify the model and fields for the form.
-    """
-
     class Meta:
-        """
-        Meta class to specify the model and fields for the form.
-        """
         model = Order
         fields = ('full_name', 'email', 'phone_number',
                   'street_address1', 'street_address2',
@@ -23,14 +13,8 @@ class OrderForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         """
-        Initialize the form with placeholders, classes, and other attributes.
-
-        Adds placeholders and classes to form fields, removes auto-generated labels,
-        and sets autofocus on the first field.
-
-        Args:
-            *args: Variable length argument list.
-            **kwargs: Arbitrary keyword arguments.
+        Add placeholders and classes, remove auto-generated
+        labels and set autofocus on first field
         """
         super().__init__(*args, **kwargs)
         placeholders = {
@@ -45,10 +29,7 @@ class OrderForm(forms.ModelForm):
             'county': 'County',
         }
 
-        # Set autofocus on the first field
         self.fields['full_name'].widget.attrs['autofocus'] = True
-
-        # Loop through form fields to set placeholders, classes, and labels
         for field in self.fields:
             if self.fields[field].required:
                 placeholder = f'{placeholders[field]} *'
