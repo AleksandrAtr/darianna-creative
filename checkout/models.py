@@ -4,16 +4,20 @@ from django.db import models
 from django.db.models import Sum
 from django.conf import settings
 
-from products.models import Product
-
 from django_countries.fields import CountryField
+
+from products.models import Product
+from profiles.models import UserProfile
+
 
 class Order(models.Model):
     """
     Model representing an order made by a user.
     """
-
+    # Define fields for the Order model
     order_number = models.CharField(max_length=32, null=False, editable=False)
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
+                                     null=True, blank=True, related_name='orders')
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
@@ -32,17 +36,20 @@ class Order(models.Model):
 
     def _generate_order_number(self):
         """
-        Generate a random, unique order number using UUID
+        Generate a random, unique order number using UUID.
         """
         return uuid.uuid4().hex.upper()
 
     def update_total(self):
         """
-        Update grand total each time a line item is added,
+        Update the grand total each time a line item is added,
         accounting for delivery costs.
         """
+        # Calculate the order total by summing the lineitem totals
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        # Determine delivery cost based on cost in settings
         self.delivery_cost = settings.STANDARD_DELIVERY
+        # Calculate the grand total
         self.grand_total = self.order_total + self.delivery_cost
         self.save()
 
@@ -51,22 +58,27 @@ class Order(models.Model):
         Override the original save method to set the order number
         if it hasn't been set already.
         """
+        # Generate and set the order number if it's not already set
         if not self.order_number:
             self.order_number = self._generate_order_number()
         super().save(*args, **kwargs)
 
     def __str__(self):
+        """
+        Return a string representation of the Order instance,
+        using the order number.
+        """
         return self.order_number
 
 
 class OrderLineItem(models.Model):
     """
-    Model representing a line item in an order.
+    Model representing a line item within an order.
     """
-
+    # Define fields for the OrderLineItem model
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
     product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
-    product_size = models.CharField(max_length=10, null=True, blank=True)
+    product_size = models.CharField(max_length=10, null=True, blank=True) # XS, S, M, L, XL
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
 
@@ -75,8 +87,13 @@ class OrderLineItem(models.Model):
         Override the original save method to set the lineitem total
         and update the order total.
         """
+        # Calculate and set the lineitem total
         self.lineitem_total = self.product.price * self.quantity
         super().save(*args, **kwargs)
 
     def __str__(self):
+        """
+        Return a string representation of the OrderLineItem instance,
+        using the product SKU and the order number it belongs to.
+        """
         return f'SKU {self.product.sku} on order {self.order.order_number}'
