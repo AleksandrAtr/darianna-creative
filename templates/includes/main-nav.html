@@ -24,8 +24,8 @@
             <li><a class="dropdown-item" href="{% url 'account_logout' %}">My Profile</a></li>
             <li><a class="dropdown-item" href="">Logout</a></li>
             {% else %}
-            <li><a class="dropdown-item logo-font fw-bold text-black" href=""{% url 'account_signup' %}"">Register</a></li>
-            <li><a class="dropdown-item logo-font fw-bold text-black" href=""{% url 'account_login' %}"">Login</a></li>
+            <li><a class="dropdown-item logo-font fw-bold text-black" href="{% url 'account_signup' %}">Register</a></li>
+            <li><a class="dropdown-item logo-font fw-bold text-black" href="{% url 'account_login' %}">Login</a></li>
             {% endif %}
         </ul>
         </li>
