@@ -5,13 +5,24 @@
     <section class="container-fluid">
         <div class="col">
             <hr>
-            <h1>ADD REVIEW</h1>
+            <h1>Add Review for {{ product.name }}</h1>
             <hr>
         </div>
     </section>
 {% endblock %}
 
 {% block content %}
+<!-- Product Image display if exist-->
+{% if product.image %}
+<img class="image-ratio d-none d-sm-block" src="{{ product.image.url }}" alt="{{ product.name }}">
+{% else %}
+    <img class="image-ratio d-none d-sm-block" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ product.name }}">
+{% endif %}
+<!-- Generate Djnago form -->
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit Review</button>
+</form>
+
 {% endblock %}
-
-
