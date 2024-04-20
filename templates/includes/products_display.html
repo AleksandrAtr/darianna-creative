@@ -1,6 +1,11 @@
 <div class="col-md-4">
     <div class="card mb-4 shadow-sm">
-        <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top">
+        {% if product.image %}
+            <img class="card-img-top" src="{{ product.image.url }}" alt="{{ item.product.name }}">
+        {% else %}
+            <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+        {% endif %}
+
         <div class="card-body">
             <h5 class="card-title">{{ product.name }}</h5>
             <p class="card-text">£{{ product.price }}</p>
