@@ -5,5 +5,5 @@ from . import views
 
 urlpatterns = [
     path('product-detail/<product_id>/', views.product_detail, name='product-detail'),
-    # Other URL patterns for products as needed
+    path('add/', views.add_product, name='add_product'),
 ]
