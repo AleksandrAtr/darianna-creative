@@ -1,28 +1,48 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 {% load static %}
 
 {% block page_header %}
     <section class="container-fluid">
-        <div class="col">
-            <hr>
-            <h1>Add Review for {{ product.name }}</h1>
-            <hr>
+        <div class="row justify-content-center align-items-center">
+            <div class="col text-center">
+                <hr>
+                <h4>Add Review for {{ product.name }}</h4>
+                <hr>
+            </div>
         </div>
     </section>
 {% endblock %}
 
 {% block content %}
-<!-- Product Image display if exist-->
-{% if product.image %}
-<img class="image-ratio d-none d-sm-block" src="{{ product.image.url }}" alt="{{ product.name }}">
-{% else %}
-    <img class="image-ratio d-none d-sm-block" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ product.name }}">
-{% endif %}
-<!-- Generate Djnago form -->
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Submit Review</button>
-</form>
-
+<div class="container-fluid">
+    <div class="row">
+        <!-- Product detail section -->
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="image-container my-5">
+                {% if product.image %}
+                    <a href="{{ product.image.url }}" target="_blank">
+                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    </a>
+                {% else %}
+                    <a href="">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="product-details-container mb-5 mt-md-5">
+                <!-- Bag section -->
+                <form class="form" action="" method="">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <!-- Navigation links -->
+                    <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Submit review">
+                    <a class="btn btn-black rounded-0 text-uppercase mt-5" href="{% url 'product-detail' product.id %}">CANCEL</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
