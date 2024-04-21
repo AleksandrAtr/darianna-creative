@@ -142,6 +142,10 @@ body {
     color: red;
 }
 
+.success {
+    color: rgb(81, 255, 0);
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

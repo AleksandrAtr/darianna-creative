@@ -4,6 +4,7 @@ from .forms import ReviewForm
 from django.contrib import messages
 from django.utils.translation import gettext as _
 from django.contrib.auth.decorators import login_required
+from django.db.models import Avg
 
 # Create your views here.
 
@@ -23,6 +24,14 @@ def add_review(request, product_id):
             review.product = product
             review.user = author
             review.save()
+            
+            if product.reviews.count() > 0:
+                product.rating = round(
+                    product.reviews.aggregate(
+                            Avg('rating'))['rating__avg'])
+            else:
+                product.rating = 0
+            product.save()
             
             messages.success(request, _("New product review added."))
             return redirect('product-detail', product_id=product.id)
