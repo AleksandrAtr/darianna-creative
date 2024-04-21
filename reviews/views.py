@@ -3,15 +3,19 @@ from products.models import Product
 from .forms import ReviewForm
 from django.contrib import messages
 from django.utils.translation import gettext as _
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+
+
+@login_required()
 def add_review(request, product_id):
     
     product = get_object_or_404(Product, pk=product_id)
-    author = request.user if request.user.is_authenticated else "Anonymous"
     
     if request.method == "POST":
         form = ReviewForm(request.POST)
+        author = request.user
         
         if form.is_valid():
             # Save the review form
