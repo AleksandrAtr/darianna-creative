@@ -12,6 +12,11 @@
         <li class="nav-item">
             <a class="nav-link active logo-font fw-bold text-black" aria-current="page" href="{% url 'workshop' %}">WORKSHOPS</a>
         </li>
+        {% if request.user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link active logo-font fw-bold text-black" aria-current="page" href="{% url 'blog' %}">BLOG</a>
+            </li>
+        {% endif %}
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle active logo-font fw-bold nav-link text-black" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             MEMBER
@@ -38,18 +43,7 @@
                     <span class="ml-2 text-info font-weight-bold" style="margin-left: 10px !important;">£{{ grand_total|floatformat:2 }}</span>
                 </a>
             </li>
-            
-            
-            
-            <!-- <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
-                <i class="fas fa-shopping-bag fa-lg"></i> ${{ grand_total|floatformat:2 }}</a>
-                <div class="">
-                     -->
-                    <!-- <div style="display: inline-block;"><i class="fas fa-shopping-bag fa-lg"></i> ${{ grand_total|floatformat:2 }}</div> -->
-                    
-
                     {% else %}
-
                     {% endif %}
                 </p>
             </a>

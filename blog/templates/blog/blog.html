@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Blog
+{% endblock %}
+
+{% block page_header %}
+    <section class="container-fluid section-wh">
+        <div class="col">
+            <p class="content-post logo-font">
+                Welcome to our photography blog, 
+                where we explore the art of visual storytelling. 
+                From captivating portraits to breathtaking fine art, 
+                join us on a journey of inspiration and discovery through the lens.
+            </p>
+        </div>
+    </section>
+{% endblock %}
+
+{% block content %}
+<!-- Container for displaying reviews -->
+<div class="container mx-auto">
+    {% for post in posts %}
+        <!-- Display the author and date of the review -->
+        <div class="row font-body text-dark-grey">
+            <div class="card-body">
+                <span class="d-inline me-2">
+                    <i class="fas fa-user text-ib-light text-center"></i> 
+                    {{ post.author }}, 
+                    Date: {{ post.created_on|date:"d/m/Y" }}, 
+                </span>
+            </div>
+            <div class="card-body">
+                <!-- Title of the review -->
+                <div class="row font-body text-dark-grey review-header mb-2">
+                    <div class="col-12">
+                        <h3 class="review-title weight-semibold">{{ post.title }}</h3>
+                    </div>
+                </div>
+                <!-- Content of the review -->
+                <div class="row font-body review-content mb-2">
+                    <div class="col-12">
+                        <p>{{ post.content }}</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
