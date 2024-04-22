@@ -24,10 +24,15 @@ def product_detail(request, product_id):
 
     # Retrieve the product object with the given product_id from the database
     product = get_object_or_404(Product, pk=product_id)
+    #  Retrieve all reviews associated with the product and order them by 
+    # creation date (descending)
+    reviews = product.reviews.all().order_by('-created_on')
+    print(reviews)
 
     # Prepare the context to pass the product data to the template
     context = {
         'product': product,
+        'reviews': reviews,
     }
 
     # Render the product detail page with the product data
@@ -79,7 +84,9 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product-detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to update product. '
+                'Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')

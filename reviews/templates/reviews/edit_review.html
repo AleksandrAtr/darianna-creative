@@ -37,7 +37,7 @@
                 <form method="POST" action="{% url 'edit_review' review.id %}" id="edit_review_form">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <!-- Navigation links -->
+                    <!-- Navigation links / Buttons -->
                     <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="UPDATE">
                     <a class="btn btn-black rounded-0 text-uppercase mt-5" href="{% url 'product-detail' product.id %}">CANCEL</a>
                 </form>

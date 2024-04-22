@@ -30,16 +30,28 @@
         </ul>
         </li>
         <!-- Shopping bag link -->
-        <li class="list-inline-item">
-            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
-                <div class="text-center">
-                    <div style="display: inline-block;"><i class="fas fa-shopping-bag fa-lg"></i></div>
-                    <p class="my-0" style="display: inline-block;">
-                        {% if grand_total %}
-                            ${{ grand_total|floatformat:2 }}
-                        {% endif %}
-                    </p>
-                </div>
+        <li class="list-inline-item text-left">
+            {% if grand_total %}
+            <li class="row">
+                <a class="col-auto d-flex align-items-center nav-link" href="{% url 'view_bag' %}">
+                    <i class="text-info font-weight-bold fas fa-shopping-bag fa-lg mr-2"></i>
+                    <span class="ml-2 text-info font-weight-bold" style="margin-left: 10px !important;">£{{ grand_total|floatformat:2 }}</span>
+                </a>
+            </li>
+            
+            
+            
+            <!-- <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
+                <i class="fas fa-shopping-bag fa-lg"></i> ${{ grand_total|floatformat:2 }}</a>
+                <div class="">
+                     -->
+                    <!-- <div style="display: inline-block;"><i class="fas fa-shopping-bag fa-lg"></i> ${{ grand_total|floatformat:2 }}</div> -->
+                    
+
+                    {% else %}
+
+                    {% endif %}
+                </p>
             </a>
         </li>
     </ul>

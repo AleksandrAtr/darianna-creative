@@ -11,6 +11,16 @@ from .models import Review
 # Add review view
 @login_required()  # Requires user authentication
 def add_review(request, product_id):
+    """ 
+    Allows users to add a review for a product.
+
+    Parameters:
+    - request: The HTTP request object.
+    - product_id: The ID of the product for which the review is being added.
+
+    Returns:
+    - Redirects to the product detail page after adding the review.
+    """
     # Retrieve the product object or return a 404 error if not found
     product = get_object_or_404(Product, pk=product_id)
     
@@ -54,6 +64,7 @@ def add_review(request, product_id):
     return render(request, 'reviews/add_review.html', context)
 
 
+
 # Edit review view
 @login_required()  # Requires user authentication
 def edit_review(request, review_id):
@@ -89,13 +100,10 @@ def edit_review(request, review_id):
             form.save()
 
             # Calculate and update the product's average rating
-            if product.reviews.exists():
-                product.rating = round(product.reviews.aggregate(
-                    Avg('rating'))['rating__avg'] or 0)
-            else:
-                product.rating = round(review.rating)
-            
+            product.rating = round(product.reviews.aggregate(
+                Avg('rating'))['rating__avg'] or 0)
             product.save()
+
             # Display success message and redirect to profile page after 
             # successful edit
             messages.success(request, 'Review successfully edited!')
@@ -148,8 +156,6 @@ def delete_review(request, review_id):
     review.delete()
 
     # Update product rating after deleting the review
-
-    # Check if there are still reviews for the product
     if product.reviews.exists():  
         # Calculate and update the product's average rating
         product.rating = round(product.reviews.aggregate(
@@ -164,3 +170,4 @@ def delete_review(request, review_id):
     # Display success message and redirect to profile page
     messages.success(request, 'Review successfully deleted!')
     return redirect('profile')
+
