@@ -1,0 +1,1 @@
+web: gunicorn darianna_creative.wsgi:application
