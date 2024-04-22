@@ -1,0 +1,59 @@
+[
+    {
+        "model": "blog.blogpost",
+        "pk": 1,
+        "fields": {
+            "author": 3,
+            "title": "How to Get Ready for a Studio Portrait Photography",
+            "content": "Preparing for a studio portrait photography session requires careful planning and attention to detail. In this blog post, we'll explore the essential steps to ensure you look your best in front of the camera...",
+            "created_on": "2024-04-20"
+        }
+    },
+    {
+        "model": "blog.blogpost",
+        "pk": 2,
+        "fields": {
+            "author": 3,
+            "title": "Fine Art Photography",
+            "content": "Fine art photography is a form of artistic expression that goes beyond capturing a moment. It involves creativity, vision, and a deep understanding of light, composition, and subject matter...",
+            "created_on": "2024-04-20"
+        }
+    },
+    {
+        "model": "blog.blogpost",
+        "pk": 3,
+        "fields": {
+            "author": 3,
+            "title": "Workshops About How to Take a Perfect Headshot",
+            "content": "Headshots are essential for professionals in various fields, from actors and models to business professionals. Attending a workshop on how to take the perfect headshot can provide valuable insights and skills...",
+            "created_on": "2024-04-20"
+        }
+    },
+    {
+        "model": "blog.blogpostimage",
+        "pk": 1,
+        "fields": {
+            "blog_post": 1,
+            "image_url": "https://example.com/portrait_photo.jpg",
+            "image": "bl1.png"
+        }
+    },
+    {
+        "model": "blog.blogpostimage",
+        "pk": 2,
+        "fields": {
+            "blog_post": 2,
+            "image_url": "https://example.com/fine_art_photo.jpg",
+            "image": "bl2.png"
+        }
+    },
+    {
+        "model": "blog.blogpostimage",
+        "pk": 3,
+        "fields": {
+            "blog_post": 3,
+            "image_url": "https://example.com/headshot_workshop.jpg",
+            "image": "bl3.png"
+        }
+    }
+]
