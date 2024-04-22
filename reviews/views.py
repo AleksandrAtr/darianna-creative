@@ -83,13 +83,13 @@ def edit_review(request, review_id):
     # Retrieve the review object or return a 404 error if not found
     review = get_object_or_404(Review, pk=review_id)
     product = review.product  # Get the product associated with the review
-
+    next = request.GET.get('next', '') # Get URL for redirect
     # Check if the current user is the owner of the review
     if request.user != review.user:
         # If not the owner, display an error message and redirect to 
         # profile page
         messages.error(request, 'You can only edit your own reviews.')
-        return redirect('profile')
+        return redirect(next)
 
     # If the request method is POST, process the form submission
     if request.method == "POST":
@@ -107,7 +107,7 @@ def edit_review(request, review_id):
             # Display success message and redirect to profile page after 
             # successful edit
             messages.success(request, 'Review successfully edited!')
-            return redirect('profile')
+            return redirect(reverse('product-detail', args=[product.id]))
 
         else:
             # If form data is invalid, display error message
@@ -144,13 +144,15 @@ def delete_review(request, review_id):
     # Retrieve the review object or return a 404 error if not found
     review = get_object_or_404(Review, pk=review_id)
     product = review.product  # Get the product associated with the review
+    next = request.GET.get('next', '')
 
     # Check if the current user is the owner of the review
-    if request.user != review.user:
+    if not request.user.is_superuser:
+        if request.user != review.user:
         # If not the owner, display an error message and redirect to 
         # profile page
-        messages.error(request, 'You can only delete your own reviews.')
-        return redirect('profile')
+            messages.error(request, 'You can only delete your own reviews.')
+            return redirect(next)
 
     # Delete the review
     review.delete()
@@ -169,5 +171,5 @@ def delete_review(request, review_id):
 
     # Display success message and redirect to profile page
     messages.success(request, 'Review successfully deleted!')
-    return redirect('profile')
+    return redirect(next)
 
