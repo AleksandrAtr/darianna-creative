@@ -30,8 +30,6 @@ def add_to_bag(request, item_id):
     product = get_object_or_404(Product, pk=item_id)
     # Get quantity of the product to add from POST data
     quantity = int(request.POST.get('quantity')) 
-    # Get the redirect URL from POST data
-    redirect_url = request.POST.get('redirect_url')
     
     size = None
     if 'product_size' in request.POST:
@@ -67,7 +65,7 @@ def add_to_bag(request, item_id):
     request.session['bag'] = bag  
 
     # Redirect to the URL specified in the 'redirect_url' POST parameter
-    return redirect(redirect_url)
+    return redirect(reverse('product-detail', args=[product.id]))
 
 def adjust_bag(request, item_id):
     """
