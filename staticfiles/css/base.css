@@ -1,0 +1,234 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/background-one.png') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: #555;
+    font-family: 'Lato';
+    font-family: "Roboto Mono", monospace;
+}
+
+
+.p-text {
+    margin: 5px 0 5px 0;
+}
+
+.footer {
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+    min-width: 100%;
+    background: black;
+}
+
+/* Background overlay */
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.text-bg-light {
+    color: #f8f9fa !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.section-wh {
+    min-height: 550px;
+    background: url('/media/black-bg.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    font-style: normal;
+    text-align: center;
+    z-index: -10;
+}
+
+.content-post {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 1.9rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    color: white;
+}
+
+.content-post-add {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    color: white;
+}
+
+/* Navigation */
+
+.nav-text {
+    font-size: 1.3rem;
+}
+
+/* Bootstrap overwrites */
+.navbar-brand {
+    font-size: 2.25rem;
+}
+
+/* ------------------------------------------- alert messages / feedback */
+.flash-message {
+    /* max-width: 850px; */
+    background-color: #000;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: none;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: rgb(81, 255, 0);
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem; /* mt-4 */
+    color: #6c757d; /* text-secondary */
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+    margin-bottom: 15px;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #000;
+    border: 1px solid #000;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+	color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+
+.allauth-form-inner-content a {
+	color: #17a2b8; /* text-info */
+}
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 90px;
+    }
+}
