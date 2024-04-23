@@ -3,19 +3,24 @@
         <li class="nav-item">
             <a class="nav-link active logo-font fw-bold text-black" aria-current="page" href="{% url 'home' %}">ABOUT</a>
         </li>
+        <hr class="m-0">
         <li class="nav-item">
             <a class="nav-link active logo-font fw-bold text-black" aria-current="page" href="{% url 'headshots' %}">HEADSHOTS</a>
         </li>
+        <hr class="m-0">
         <li class="nav-item">
             <a class="nav-link active logo-font fw-bold text-black" aria-current="page" href="{% url 'artsale' %}">ARTSALE</a>
         </li>
+        <hr class="m-0">
         <li class="nav-item">
             <a class="nav-link active logo-font fw-bold text-black" aria-current="page" href="{% url 'workshop' %}">WORKSHOPS</a>
         </li>
+        <hr class="m-0">
         {% if request.user.is_authenticated %}
             <li class="nav-item">
                 <a class="nav-link active logo-font fw-bold text-black" aria-current="page" href="{% url 'blog' %}">BLOG</a>
             </li>
+            <hr class="m-0">
         {% endif %}
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle active logo-font fw-bold nav-link text-black" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -37,7 +42,7 @@
         <!-- Shopping bag link -->
         <li class="list-inline-item text-left">
             {% if grand_total %}
-            <li class="row">
+            <li class="nav-item">
                 <a class="col-auto d-flex align-items-center nav-link" href="{% url 'view_bag' %}">
                     <i class="text-info font-weight-bold fas fa-shopping-bag fa-lg mr-2"></i>
                     <span class="ml-2 text-info font-weight-bold" style="margin-left: 10px !important;">£{{ grand_total|floatformat:2 }}</span>

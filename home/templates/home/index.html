@@ -1,20 +1,31 @@
 {% extends "base.html" %}
 {% load static %}
+{% load account socialaccount %}
 
 {% block page_header %}
     <section class="container-fluid section-wh">
-        <div class="col">
+        <div class="row">
             <p class="content-post logo-font">
                 WE ARE A TEAM OF PROFESSIONALS SPECIALIZING IN PORTRAIT PHOTOGRAPHY, FINE ART, AND WORKSHOPS.
             </p>
-            <p class="content-post-add">
-                REGISTER NOW FOR EXCLUSIVE ACCESS TO BLOG CONTENT CURATED BY RENOWNED PHOTOGRAPHERS.
-            </p>
         </div>
-    </section>
+    </section>    
 {% endblock %}
 
 {% block content %}
+    <section class="container-fluid section-bl">
+        <div class="row">
+            <div class="col-12 mt-5">
+            <p class="content-post logo-font text-black">
+                REGISTER NOW FOR EXCLUSIVE ACCESS TO BLOG CONTENT CURATED BY RENOWNED PHOTOGRAPHERS.
+            </p>
+            </div>
+            <div class="col mb-5">
+                <a href="{% url 'account_signup' %}" class="btn btn-black rounded-0 btn-lg">
+                    <span class="text-uppercase">REGISTER</span>
+                </a>
+            </div>
+    </section>
 {% endblock %}
 
 
