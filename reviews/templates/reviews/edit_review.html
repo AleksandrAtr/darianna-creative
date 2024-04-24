@@ -2,47 +2,56 @@
 {% load crispy_forms_tags %}
 {% load static %}
 
+{% block title %}
+    Edit Product
+{% endblock %}
+
 {% block page_header %}
-    <section class="container-fluid">
-        <div class="row justify-content-center align-items-center">
-            <div class="col text-center">
-                <hr>
-                <h1>Edit review of {{ product.name }}</h1>
-                <hr>
-            </div>
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
         </div>
-    </section>
+    </div>
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid">
-    <div class="row">
-        <!-- Product detail section -->
-        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-            <div class="image-container my-5">
-                {% if product.image %}
-                    <a href="{{ product.image.url }}" target="_blank">
-                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                    </a>
-                {% else %}
-                    <a href="">
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                    </a>
-                {% endif %}
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="product-details-container mb-5 mt-md-5">
-                <!-- Review form -->
-                <form method="POST" action="{% url 'edit_review' review.id %}" id="edit_review_form">
-                    {% csrf_token %}
-                    {{ form|crispy }}
-                    <!-- Navigation links / Buttons -->
-                    <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="UPDATE">
-                    <a class="btn btn-black rounded-0 text-uppercase mt-5" href="{% url 'product-detail' product.id %}">CANCEL</a>
-                </form>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center">
+            <div class="col text-center">
+                <hr>
+                    <h1>Edit review of {{ product.name }}</h1>
+                <hr>
             </div>
         </div>
     </div>
-</div>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Product detail section -->
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                <div class="image-container my-5">
+                    {% if product.image %}
+                        <a href="{{ product.image.url }}" target="_blank">
+                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                    {% else %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="product-details-container mb-5 mt-md-5">
+                    <!-- Review form -->
+                    <form method="POST" action="{% url 'edit_review' review.id %}" id="edit_review_form">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <!-- Navigation links / Buttons -->
+                        <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="UPDATE">
+                        <a class="btn btn-black rounded-0 text-uppercase mt-5" href="{% url 'product-detail' product.id %}">CANCEL</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

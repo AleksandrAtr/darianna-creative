@@ -29,7 +29,11 @@
         {% endblock %}
 
         {% block corejs %}
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="{% static 'js/base.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/base.js' %}"></script>
+
 
         <!-- Font Awesome Javasript-->
         <script src="https://kit.fontawesome.com/9c0d1f1ea6.js" crossorigin="anonymous"></script>
@@ -47,7 +51,7 @@
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-xl navbar-light bg-light">
+            <nav class="navbar navbar-expand-xl navbar-light bg-light fixed-top">
                 <div class="container-fluid container">
                     <a class="navbar-brand logo-font text-black" href="{% url 'home' %}"><strong>Darianna</strong> Creative</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,15 +78,12 @@
         {% endblock %}
 
         {% block postloadjs %}
-            <script>
-                function goBack() {
-                    window.history.back();
-                }
-            </script>
+            <script type="text/javascript" src="{% static 'js/base.js' %}"></script>
         {% endblock %}
+
         <footer>
             <div class="container-fluid">
-                <div class="row footer">
+                <div class="row">
                     <div class="col"> 
                         <p class="col logo-font text-bg-light p-text">Website built for educational purpose only</p>
                     </div>

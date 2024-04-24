@@ -38,6 +38,7 @@ class ReviewForm(forms.ModelForm):
                 placeholder = placeholders[field]
             # Set placeholder and class attributes for the field
             self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'border-black rounded-0'
+            self.fields[field].widget.attrs['class'] = \
+                'border-black rounded-0 mt-3 mb-3'                 
             # Hide the field labels in the form
             self.fields[field].label = False

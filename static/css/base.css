@@ -30,7 +30,6 @@ nav {
 }
 
 /* Background overlay */
-
 .overlay {
 	height: 100%;
 	width: 100%;
@@ -40,10 +39,6 @@ nav {
 	background: white;
 	z-index: -1;
 }
-
-
-
-
 
 /* from Bulma */
 .icon {
@@ -71,6 +66,11 @@ nav {
 .btn-black {
     background: black;
     color: white;
+}
+
+.rev-nav-block {
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -128,7 +128,6 @@ nav {
     align-items: center;
     font-style: normal;
     text-align: center;
-    /* z-index: -10; */
 }
 
 .content-post {
@@ -164,11 +163,13 @@ nav {
 
 /* ------------------------------------------- alert messages / feedback */
 .flash-message {
-    /* max-width: 850px; */
     background-color: #000;
     color: white;
     font-size: 1.5rem;
     text-align: center;
+    margin-top: 80px; /* Adjust to match the height of the fixed container */
+    position: relative;
+    z-index: 9999;
     margin-left: auto;
     margin-right: auto;
     list-style-type: none;
@@ -179,7 +180,7 @@ nav {
 }
 
 .success {
-    color: rgb(81, 255, 0);
+    color: #f8f9fa;
 }
 
 /* .navbar-brand {
@@ -253,6 +254,16 @@ nav {
     }
   }
 
+  .form-control.qty_input {
+    text-align: center;
+  }
+
+  .card-body.navi {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) { 
@@ -263,15 +274,22 @@ nav {
         left: 0;
         z-index: 1030;
     }
+}
 
-    .header-container {
-        padding-top: 90px;
-    }
+/* Media-------------------------------- min-width 500px */
+@media (min-width: 500px) {
+.header-container {
+    padding-top: 80px;
+}
 }
 
 @media (max-width: 500px) {
     .navbar-brand {
         font-size: 1.5rem;
+    }
+
+    .header-container {
+        padding-top: 62px;
     }
 
 
@@ -284,7 +302,7 @@ nav {
     }
 
     .navbar-toggler {
-        padding: .25rem .75rem;
+        padding: 0.25rem 0.35rem;
         font-size: 0.8rem;
     }
 
@@ -294,5 +312,39 @@ nav {
     
     .section-bl {
         min-height: 350px;
-    }   
+    }  
+    
+    .qty_input, .increment-qty, .decrement-qty {
+        padding: .25rem .5rem !important;
+        text-align: center;
+    }
+
+    .btn.btn-outline-black.rounded-0,
+    .btn.btn-black.rounded-0 {
+        padding: .375rem .375rem;
+    }
+
+    .btn.btn-outline-black.rounded-0.btn-lg,
+    .btn.btn-black.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
+
+    .list-group-item.navi {
+        padding: 0;
+    }
+
+    .card-body.navi {
+        font-size: 0.5rem!important;
+        margin: 8px 0;
+        padding: 0!important;
+    }
+
+    .flash-message {
+        font-size: 0.9rem;
+    }
+    
+    .form-control-file{
+        max-width: 100%;
+    }
 }

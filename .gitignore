@@ -14,3 +14,4 @@ backup/
 bag/views copy working.py
 products/templates/products/product_detail copy.html
 bag/views copy.py
+TESTING.MD

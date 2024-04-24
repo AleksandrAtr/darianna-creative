@@ -2,7 +2,16 @@
 {% load static %}
 {% load bag_tools %}
 
+{% block title %}
+    Bag
+{% endblock %}
+
 {% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block content %}
@@ -152,12 +161,6 @@
             </div>
         </div>
     </div>
-    <!-- JavaScript function to navigate to the previous page -->
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
 {% endblock %}
 
 {% block postloadjs %}
