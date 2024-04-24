@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect, reverse, \
     get_object_or_404, HttpResponse
 from products.models import Product
-
 # Create your views here.
+
 
 def view_bag(request):
     """
@@ -15,6 +15,7 @@ def view_bag(request):
         HttpResponse: The rendered bag contents page.
     """
     return render(request, 'bag/bag.html')  # Render the bag contents page
+
 
 def add_to_bag(request, item_id):
     """
@@ -67,6 +68,7 @@ def add_to_bag(request, item_id):
 
     # Redirect to the URL specified in the 'redirect_url' POST parameter
     return redirect(reverse('product-detail', args=[product.id]))
+
 
 def adjust_bag(request, item_id):
     """
