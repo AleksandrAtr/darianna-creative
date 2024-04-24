@@ -3,6 +3,7 @@
 [DaRianna Creative](https://darianna-creative-29127b71c835.herokuapp.com/) is a fictional website created for educational purposes as part of the Code Institute 4_P course's Milestone Project 4. It is a full-stack website that focuses on using HTML, CSS, Python, Django, and relational database technologies. The website presents the photographer's portfolio, provides headshot services, facilitates fine art print purchases, and offers valuable insights to enhance photo sessions. <br>
  
 
+ ![site on different devices](media/readme/mockup.png)
 <br>
 
 # Table of contents
@@ -148,9 +149,18 @@ During the planning phase, I developed a database schema to efficiently organize
 
 ![High-level Database Schema](image)
 
-### Suggested Future Improvements
+### Future Improvements
 
-For future implementations, refer to the "Should Have" and "Could Have" items in the User Stories in the GitHub projects. These are tasks that were not completed before the Code Institute project submission deadline. Incorporating them will enhance the overall customer experience. [Explore the Agile Development section](#agile-development) and refer directly to the [user stories on Github Projects.](https://github.com/users/AleksandrAtr/projects/7/views/1?layout=board) 
+For future implementations, consider the "Should Have" and "Could Have" items outlined in the User Stories on the GitHub Projects board. These tasks were not completed before the Code Institute project submission deadline but incorporating them will significantly enhance the overall customer experience. Explore the Agile Development section for more details and refer directly to the user stories on [GitHub Projects](https://github.com/users/AleksandrAtr/projects/7/views/1?layout=board).
+
+Additionally, it is suggested to include the following enhancements:
+
+- **Headshots Portfolio:** Integrate a portfolio section showcasing the business's headshots photography portfolio to provide users with a comprehensive overview of the photographer's work.
+- **Prints Size Cost Functionality:** Develop functionality to adjust pricing based on the size of fine art prints, offering customers flexibility and customization options.
+- **CRUD for Blog Posts:** Implement Create, Read, Update, and Delete functionality for blog posts, allowing the business to publish and manage articles effectively.
+  
+These enhancements are discussed further in the [Website Main Features](#main-website-features) section below.
+
 
 
 ## Website colour palette
@@ -190,6 +200,17 @@ Consistency is maintained across pages with:
 - **Main Content Section** Varies on pages and described below.
 - **Footer:** Concludes the home page, offering a space for additional information and relevant links.
 
+### Navigation bar mobile view bag empty
+![](media/readme/nav-m.png)
+### Navigation bar desktop view bag empty
+![](media/readme/nav-dt.png)
+
+### Navigation bar mobile view bag not empty
+![](media/readme/nav-bag-m.png)
+### Navigation bar desktop view bag not empty
+![](media/readme/nav-bag-dt.png)
+
+
 The website's design is responsive, ensuring usability across various screen sizes.
 
 ### Products Sale
@@ -206,7 +227,7 @@ Users have CRUD functionality for reviews based on their registration status.
 
 ### Payments
 
-Payments are facilitated through Stripe, ensuring secure transactions.
+Payments are facilitated through [Stripe](https://stripe.com/gb), ensuring secure transactions.
 
 ## About Page Overview
 The About page serves as the Home page or landing page. It's designed to welcome users with easy navigation and essential information. It includes a straightforward menu for moving around the site and a header that captures visitors' attention, setting the tone for the site's content and information about the business. The footer at the bottom of the page has space for extra details like contact information or useful links. 
@@ -214,6 +235,11 @@ The About page serves as the Home page or landing page. It's designed to welcome
 ### Key Components of the main section:
 - **Hero Image:** Engages users with visually compelling content.
 - **Additional Site Information Section:** Invites users to register and provides a link to the signup page.
+
+### Mobile view
+![](media/readme/home-m.png)
+### Desktop view
+![](media/readme/home-dt.png)
 
 ## Headshots Page
 The Headshots page showcases Portrait photography packages. It provides a seamless user experience with intuitive navigation. Each product listing displays the package name, price, and rating, allowing visitors to evaluate the offerings quickly. The page layout reflects the business's professionalism and invites potential customers to explore further.
@@ -223,11 +249,165 @@ The original plan included adding Portfolio photographs alongside the products f
 ### Key Components of the main section:
 - **Product Display:** Offers details of the product range and a button for accessing detailed views.
 
+### Mobile view
+![](media/readme/headshots-m.png)
+### Desktop view
+![](media/readme/headshots-dt.png)
+
+## Artsale Page
+
+The Artsale page features a collection of fine art prints, allowing users to explore and purchase unique artworks. Like other product pages, each item is presented in card format, showcasing its name, price, rating, and size. Users can quickly assess the available prints and navigate to detailed views for more information.
+
+The fine art prints on the Artsale page differ from other products such as Headshots and Workshops due to their varying sizes. While the intention was to implement different pricing based on print size, this feature was not prioritized due to time constraints. However, it is suggested for future improvements to enhance the flexibility and customization options for customers.
+
+### Key Components of the main section:
+
+- **Product Display:** Presents a curated selection of fine art prints, highlighting their unique characteristics and inviting users to explore further.
+- **Product search:** Allows users to search for fine art prints based on title and content.
 
 
+### Mobile view
+![](media/readme/artsale-m.png)
+### Desktop view
+![](media/readme/artsale-dt.png)
 
 
+## Workshops Page
 
+The Workshops page showcases a selection of portrait photography workshops offered by the business. Each workshop is presented in card format, displaying its name, price, rating, and other relevant details. Users can easily browse through the available workshops and access detailed views for more information.
+
+The workshops featured on this page are tailored for portrait photography enthusiasts and professionals. While the initial plan included offering different workshop packages with varying content and durations, this feature was not implemented due to time constraints. It is recommended for future improvements to expand the workshop offerings and provide more options for users.
+
+### Key Components of the main section:
+
+- **Workshop Display:** Highlights the various portrait photography workshops available, providing users with insights into the content and objectives of each workshop.
+
+### Mobile view
+![](media/readme/workshops-m.png)
+### Desktop view
+![](media/readme/workshops-dt.png)
+
+## Blog Page
+
+The Blog page is designed to serve as a platform for the business to share informative articles with its audience. It offers valuable insights, tips, and information related to the website's niche. Initially, there were plans to implement CRUD functionality for the superuser to manage the blog content. However, due to time constraints, this feature was not prioritized and is suggested for future improvements.
+
+### Key Components of the main section:
+
+- **Article Display:** Provides access to a collection of informative articles, covering topics relevant to the website's audience.
+
+### Mobile view
+![](media/readme/blog-m.png)
+### Desktop view
+![](media/readme/blog-dt.png)
+
+## Profile Page
+
+The Profile page empowers users to manage their account details efficiently. It offers functionality for users to update their shipping information and view their order history. By providing access to these features, the Profile page enhances the user experience by allowing customers to maintain accurate information and track their past orders effectively.
+
+### Key Components of the main section:
+
+- **Shipping Information Update:** Enables users to modify their shipping details, ensuring accurate delivery of orders.
+- **Order History:** Displays a comprehensive record of past orders, allowing users to track their purchasing history and manage their transactions efficiently.
+
+### Mobile view
+![](media/readme/profile-m.png)
+### Desktop view
+![](media/readme/profile-dt.png)
+
+## Bag Page
+
+The Bag page offers users a convenient overview of their ordered products and allows them to manage their selections easily. Users can review the products in their bag, adjust quantities, or remove items as needed. Additionally, the page provides intuitive navigation options, such as links to Keep Shopping or proceed to Checkout, streamlining the user's shopping experience.
+
+### Key Components of the main section:
+
+- **Product Review:** Users can review the products in their bag, ensuring accuracy before proceeding to checkout.
+- **Quantity Adjustment:** Allows users to modify the quantity of individual items in their bag according to their preferences.
+- **Item Removal:** Provides the option to remove unwanted items from the bag, allowing users to refine their selections effortlessly.
+- **Navigation Links:** Offers convenient links to Keep Shopping, enabling users to continue browsing, or Checkout, facilitating a seamless transition to the payment process.
+
+### Mobile view
+![](media/readme/bag-m.png)
+### Desktop view
+![](media/readme/bag-dt.png)
+
+## Checkout Page
+
+The Checkout page streamlines the purchasing process by providing users with a comprehensive overview of their selected products, including prices and total costs. Additionally, users can enter their shipping address and payment details via input forms conveniently located on the page. Once all necessary information is provided, users can submit their order seamlessly.
+
+### Key Components of the main section:
+
+- **Product Overview:** Displays a detailed summary of the selected products for purchase, including individual prices and the total cost.
+- **Shipping Address Input:** Allows users to enter their shipping address directly on the Checkout page, ensuring accurate delivery.
+- **Payment Details:** Provides input forms for users to input their card details securely, facilitating payment processing.
+- **Order Submission:** Enables users to submit their order directly from the Checkout page, completing the purchasing process efficiently.
+- **Navigation Link:** Offers a link to return to the Bag page, allowing users to adjust their product selections if needed before finalizing their order.
+
+### Mobile view
+![](media/readme/checkout-m.png)
+### Desktop view
+![](media/readme/checkout-dt.png)
+
+### Product Administration Page
+
+The Product Administration page is designed for superusers or administrators to manage products on the website. This page provides a user-friendly interface with form input fields where product details can be entered, including the product name, description, price, and other relevant information. Additionally, users have the option to upload an image for the product, enhancing the visual presentation. By utilizing this page, administrators can efficiently add new products to the website and ensure an up-to-date and comprehensive product catalog.
+
+#### Key Features:
+- **Form Input Fields:** Allows administrators to enter product details such as name, description, and price.
+- **Image Upload:** Enables administrators to upload images to accompany product listings, enhancing visual appeal.
+
+
+### Mobile view
+![](media/readme/admin-m.png)
+### Desktop view
+![](media/readme/admin-dt.png)
+
+# Technologies Used
+
+### Languages
+- **HTML:** Used to build the main structure of the site.
+- **CSS:** Utilized for styling the website, incorporating bespoke styling and Bootstrap.
+- **JavaScript:** Implemented for front-end interactive features, including bag/product quantity input, Stripe payment handling etc.
+
+### Backend Modules / Packages & Frameworks
+- **Python:** Utilized to build the core of the backend within the Django framework.
+- **Django:** High-level Python-based Web Framework.
+- **AllAuth:** Integrated Django authentication & sign in.
+- **Django Countries:** Provided country choices for forms.
+- **Django Widget Tweaks:** Offered advanced styling & customization for Django form fields.
+- **Django Storages:** Provided custom storage backends for Django.
+- **Freezegun:** Aided automated testing by controlling the datetime module.
+- **Gunicorn:** Acted as a Python WSGI HTTP Server for UNIX.
+- **Pillow:** Python Imaging Library for extended image handling capabilities.
+- **Psycopg2:** Postgres adapter for smooth communication between the backend and the database.
+- **s3transfer, Boto3 & Botocore:** Utilized for managing Amazon AWS S3 Transfers.
+- **Stripe:** Integrated for secure online payments.
+- **dj-database-url:** Allowed the use of DATABASE_URL environment variable in settings.py.
+- **Coverage:** Tool for measuring code coverage of Python Programs.
+- **oauthlib & requests-oauthlib:** Handled authentication using the OAuth request signin logic.
+- **python3-openid:** Supported the use of the OpenID decentralized identity system.
+- **sqlparse:** SQL parser for Python.
+- **urllib3:** HTTP client for Python.
+
+### Databases
+- **SQLite:** Used as the built-in Django database for development.
+- **Elephant SQL:** Postgres-based database host, used to host the database for the live production app.
+
+### Frontend Frameworks / Libraries
+- **Bootstrap:** Employed throughout the site for styling, layout, and responsiveness.
+- **Font Awesome:** Used to add icons to the site for improved UX.
+- **jQuery:** JavaScript library for making JavaScript quicker and easier to write.
+
+### Other Tools
+- **Git:** Utilized for version control via Code Anywhere, pushing changes to GitHub.
+- **GitHub:** Used to store the project code.
+- **Heroku:** Cloud-based hosting platform used to deploy the live site.
+- **Amazon Web Services:** Hosted static files and images for the live production site.
+- **Google Chrome Dev Tools:** Tested and debugged production and live apps.
+- **Miro:** Developed wireframes into a full site design, and database schema
+- **DrawSQL:** Designed the database schema visually.
+- **Favicon.io:** Created and added the favicon to the browser tab.
+- **Techsini:** Generated website mockup images.
+- **Temp Mail:** Used for testing account verification & order confirmation.
 
 
 <!-- DEPLOYMENT -->
