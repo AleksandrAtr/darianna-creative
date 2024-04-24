@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import render, redirect, reverse, \
+    get_object_or_404, HttpResponse
 from products.models import Product
 
 # Create your views here.
@@ -71,7 +72,9 @@ def adjust_bag(request, item_id):
     """
     Adjust the quantity of the specified product to the specified amount.
 
-    This function adjusts the quantity of a product in the shopping bag based on the user's input. If the quantity is set to zero or less, the product is removed from the bag.
+    This function adjusts the quantity of a product in the shopping bag based 
+    on the user's input. If the quantity is set to zero or less, the product 
+    is removed from the bag.
 
     Args:
         request: The HTTP request object.
@@ -87,7 +90,8 @@ def adjust_bag(request, item_id):
     if 'product_size' in request.POST:
         size = request.POST['product_size']
     
-    # Retrieve the shopping bag from the session or create a new one if it doesn't exist
+    # Retrieve the shopping bag from the session or create a new one if it
+    # doesn't exist
     bag = request.session.get('bag', {})
 
     # Adjust the quantity of the product in the bag
@@ -122,7 +126,8 @@ def remove_from_bag(request, item_id):
         item_id (int): The ID of the product to remove.
 
     Returns:
-        HttpResponse: Returns status 200 if successful, status 500 if an error occurs.
+        HttpResponse: Returns status 200 if successful, status 500 if an 
+        error occurs.
     """
 
     try:
@@ -131,7 +136,8 @@ def remove_from_bag(request, item_id):
         if 'product_size' in request.POST:
             size = request.POST['product_size']
         
-        # Retrieve the shopping bag from the session or create a new one if it doesn't exist
+        # Retrieve the shopping bag from the session or create a new one if 
+        # it doesn't exist
         bag = request.session.get('bag', {})
 
         # Remove the specified item from the shopping bag
