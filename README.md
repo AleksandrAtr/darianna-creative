@@ -52,25 +52,27 @@ The intended audience spans a wide spectrum of individuals and businesses, encom
 
 | Issue ID | User Story |
 |----------|------------|
-| [#1](https://github.com/AleksandrAtr/darianna-creative/issues/2) | As a first-time visitor, I want to browse a gallery of fine art prints available for purchase to explore the artistic offerings of the photographer. |
-| [#2](https://github.com/AleksandrAtr/darianna-creative/issues/3) | As a first-time visitor, I want to browse a gallery of fine art prints available for purchase, categorized by themes or genres. |
-| [#3](https://github.com/AleksandrAtr/darianna-creative/issues/4) | As a first-time visitor, I want to view detailed information about each fine art print, including high-resolution images, descriptions, dimensions, and pricing, to make informed purchasing decisions. |
-| [#4](https://github.com/AleksandrAtr/darianna-creative/issues/5) | As a first-time visitor, I want to learn about the headshot services offered by the photographer, including packages available, pricing, and examples of previous work, to assess their suitability for my needs. |
-| [#5](https://github.com/AleksandrAtr/darianna-creative/issues/6) | As a first-time visitor, I want to easily register for an account on the website, with a straightforward and intuitive process, to access additional features and benefits. |
-| [#6](https://github.com/AleksandrAtr/darianna-creative/issues/7) | As a registered user, I want a personalized account dashboard where I can manage my profile information including deleting the account. |
-| [#7](https://github.com/AleksandrAtr/darianna-creative/issues/8) | As a registered user, I want access exclusive content to enhance my overall experience on the website. |
-| [#8](https://github.com/AleksandrAtr/darianna-creative/issues/9) | As a registered user, I want view order history. |
-| [#9](https://github.com/AleksandrAtr/darianna-creative/issues/10) | As a registered user, I want to save favourite prints for easy access in the future. |
-| [#10](https://github.com/AleksandrAtr/darianna-creative/issues/11) | As a registered user, I want to access the website's scheduling feature to view the available time slots for headshot sessions. |
-| [#11](https://github.com/AleksandrAtr/darianna-creative/issues/12) | As a registered user, my goal is to seamlessly book a photo session by completing an online payment. |
-| [#12](https://github.com/AleksandrAtr/darianna-creative/issues/13) | As a registered user, I aim to purchase fine art prints conveniently by completing an online payment. |
-| [#13](https://github.com/AleksandrAtr/darianna-creative/issues/14) | As a registered user, I want to receive regular updates and notifications about new fine art prints, special offers, and upcoming photo sessions to stay informed about the photographer's latest offerings and promotions. |
-| [#14](https://github.com/AleksandrAtr/darianna-creative/issues/15) | As a first-time user, I aim to purchase fine art prints conveniently by completing an online payment. |
-| [#15](https://github.com/AleksandrAtr/darianna-creative/issues/16) | As a first-time visitor, I want to access the website's scheduling feature to view the time slots for headshot sessions. |
-| [#16](https://github.com/AleksandrAtr/darianna-creative/issues/17) | As a registered user, my goal is to seamlessly book a photo session by completing an online payment. |
-| [#17](https://github.com/AleksandrAtr/darianna-creative/issues/18) | As an admin, I want to have access to a comprehensive content management system where I can easily add, edit, or remove fine art prints, headshot packages, and photo session options, to keep the website's offerings up-to-date and relevant. |
-| [#18](https://github.com/AleksandrAtr/darianna-creative/issues/19) | As an admin, I want to be able to manage user accounts, including approving registrations, updating account status, and addressing any user inquiries or issues, to ensure a smooth and efficient user experience. |
-| [#19](https://github.com/AleksandrAtr/darianna-creative/issues/20) | As an admin, I want to have access to analytics and reporting tools to track website traffic, user engagement, sales performance, and other key metrics, to make informed decisions and optimize the
+| [#1](https://github.com/AleksandrAtr/darianna-creative/issues/1) | As a first-time visitor, I want to browse a gallery of fine art prints available for purchase to explore the artistic offerings of the photographer. |
+| [#2](https://github.com/AleksandrAtr/darianna-creative/issues/2) | As a first-time visitor, I want to browse a gallery of fine art prints available for purchase, categorized by themes or genres. |
+| [#3](https://github.com/AleksandrAtr/darianna-creative/issues/3) | As a first-time visitor, I want to view detailed information about each fine art print, including high-resolution images, descriptions, dimensions, and pricing, to make informed purchasing decisions. |
+| [#4](https://github.com/AleksandrAtr/darianna-creative/issues/4) | As a first-time visitor, I want to learn about the headshot services offered by the photographer, including packages available, pricing, and examples of previous work, to assess their suitability for my needs. |
+| [#5](https://github.com/AleksandrAtr/darianna-creative/issues/5) | As a first-time visitor, I want to easily register for an account on the website, with a straightforward and intuitive process, to access additional features and benefits. |
+| [#6](https://github.com/AleksandrAtr/darianna-creative/issues/6) | As a registered user, I want a personalized account dashboard where I can manage my profile information including deleting the account. |
+| [#7](https://github.com/AleksandrAtr/darianna-creative/issues/7) | As a registered user, I want access exclusive content to enhance my overall experience on the website. |
+| [#8](https://github.com/AleksandrAtr/darianna-creative/issues/8) | As a registered user, I want view order history. |
+| [#9](https://github.com/AleksandrAtr/darianna-creative/issues/9) | As a registered user, I want to save favourite prints for easy access in the future. |
+| [#10](https://github.com/AleksandrAtr/darianna-creative/issues/10) | As a registered user, I want to access the website's scheduling feature to view the available time slots for headshot sessions. |
+| [#11](https://github.com/AleksandrAtr/darianna-creative/issues/11) | As a registered user, my goal is to seamlessly book a photo session by completing an online payment. |
+| [#12](https://github.com/AleksandrAtr/darianna-creative/issues/12) | As a registered user, I aim to purchase fine art prints conveniently by completing an online payment. |
+| [#13](https://github.com/AleksandrAtr/darianna-creative/issues/13) | As a registered user, I want to receive regular updates and notifications about new fine art prints, special offers, and upcoming photo sessions to stay informed about the photographer's latest offerings and promotions. |
+| [#14](https://github.com/AleksandrAtr/darianna-creative/issues/14) | As a first-time user, I aim to purchase fine art prints conveniently by completing an online payment. |
+| [#15](https://github.com/AleksandrAtr/darianna-creative/issues/15) | As a first-time visitor, I want to access the website's scheduling feature to view the time slots for headshot sessions. |
+| [#16](https://github.com/AleksandrAtr/darianna-creative/issues/16) | As a registered user, my goal is to seamlessly book a photo session by completing an online payment. |
+| [#17](https://github.com/AleksandrAtr/darianna-creative/issues/17) | As an admin, I want to have access to a comprehensive content management system where I can easily add, edit, or remove fine art prints, headshot packages, and photo session options, to keep the website's offerings up-to-date and relevant. |
+| [#18](https://github.com/AleksandrAtr/darianna-creative/issues/18) | As an admin, I want to be able to manage user accounts, including approving registrations, updating account status, and addressing any user inquiries or issues, to ensure a smooth and efficient user experience. |
+| [#19](https://github.com/AleksandrAtr/darianna-creative/issues/19) | As an admin, I want to have access to analytics and reporting tools to track website traffic, user engagement, sales performance, and other key metrics, to make informed decisions and optimize the website's performance and offerings. |
+| [#20](https://github.com/AleksandrAtr/darianna-creative/issues/20) | As a first-time visitor, I want to easily discover the services or products offered on the website. |
+
 
 ### Agile development
 User stories have been created in the GitHub Projects - links to the stories are provided in the [User Stories](#user-stories) table in the Issue ID column. The user stories have been split into categories using the MoSCoW prioritization method -
