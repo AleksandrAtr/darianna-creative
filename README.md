@@ -93,11 +93,11 @@ The procedural steps during development were as follows:
 
 This methodology centred on developing essential features first, enabling flexibility, and allowing incremental development. The approach incorporated transparent progress tracking through visual boards and early identification of issues. 
 
-The details of the user stories and associated priority labels can be found in [Projects](https://github.com/users/AleksandrAtr/projects/2/views/3?filterQuery=-status%3A%22Awaiting+Review+%28Tasks+and+Spikes%29%22).
+The details of the user stories and associated priority labels can be found in [Projects](https://github.com/users/AleksandrAtr/projects/7/views/1?layout=board).
 
 ## Minimally viable product (MVP) for the project submission
 
-#### Unregistered users
+### Unregistered users
 - About page 
 - Headshots page: Display available-for-sale photography packages
 - Artsale page: Display available-for-sale fine art prints
@@ -105,39 +105,134 @@ The details of the user stories and associated priority labels can be found in [
 - Login page
 - Register page
 
-#### Registered users
+### Registered users
 - All of the above
 - Blog page
 
 
-### Wireframes
-#### High level website design desktop - 
+## Wireframes
+### High level website design desktop - 
 <br>
  
-[Link]()
+![Link]()
 <br>
 
-[Link]()
+![Link]()
 <br>
 
-[Link]()
+![Link]()
+<br>
+![Link]()
+<br>
+![Link]()
+<br>
+![Link]()
+<br>
+![Link]()
+<br>
+![Link]()
 <br>
 
 
-#### High-level website design for mobile - 
+### High-level website design for mobile - 
 ![](static/images/home-m.png)
 <br>
 
-#### High-level webpage flow chart - 
+### High-level webpage flow chart - 
 ![](static/images/flow.png)
 <br>
+
+## Database Schema
+
+During the planning phase, I developed a database schema to efficiently organize my data, aligning with the website's business goals and user stories. The schema underwent slight modifications during development. Below is the final version represented in the high-level database schema diagram.
+
+![High-level Database Schema](image)
+
+### Suggested Future Improvements
+
+For future implementations, refer to the "Should Have" and "Could Have" items in the User Stories in the GitHub projects. These are tasks that were not completed before the Code Institute project submission deadline. Incorporating them will enhance the overall customer experience. [Explore the Agile Development section](#agile-development) and refer directly to the [user stories on Github Projects.](https://github.com/users/AleksandrAtr/projects/7/views/1?layout=board) 
+
+
+## Website colour palette
+The website embraces a sleek and minimalist colour palette, primarily featuring black and white hues and shades of grey. This monochromatic scheme enhances the site's modern and creative vibe, presenting a refined and polished aesthetic. The simplicity of the colour scheme directs attention to the content and visuals, resulting in a cohesive and visually appealing user experience.
+
+
+## Typography
+
+The website features "Roboto Mono," designed by [Google](https://fonts.google.com/specimen/Roboto+Mono/about). Roboto Mono expands the Roboto-type family with a monospaced variant. Similar to other fonts within the Roboto family, it's specifically designed for enhanced readability on screens across various devices and reading conditions. It is stylish and elegant and was chosen for its clean and modern appearance, which complements the website's overall aesthetic.
+
+
+# Main Website Features
+
+At the MVP stage, the website offers two layouts:
+
+- **For Users Not Logged In:**
+  - Access to About, Headshots, Artsale, Workshops.
+  - Membership: Register and Login options.
+
+- **For Logged-In Users:**
+  - Access to About, Headshots, Artsale, Workshops, Blog.
+  - Membership: My Profile and Logout.
+  - Additional access for Admin: Product Administration.
+
+Unregistered users can easily create new accounts by signing up.
+
+Registered users enjoy additional features, including:
+- Adding, editing, or deleting product reviews.
+- Updating or saving profile information (including address for future orders).
+- Viewing order history.
+- Reading the blog.
+
+Both registered and unregistered users have the ability to purchase the products offered.
+
+Consistency is maintained across pages with:
+- **Navigation Bar:** Enables seamless navigation across the website.
+- **Main Content Section** Varies on pages and described below.
+- **Footer:** Concludes the home page, offering a space for additional information and relevant links.
+
+The website's design is responsive, ensuring usability across various screen sizes.
+
+### Products Sale
+
+The website includes pages for Headshots, Artsale, and Workshops, each offering various products displayed similarly. Products are presented in card format, showcasing an image, name, price, and rating, with a View button for more details. The detailed product page provides additional information, including reviews.
+
+### Products Review
+
+Registered users can add, edit, or delete reviews on the product detail page. Admins can also delete reviews from others.
+
+### CRUD
+
+Users have CRUD functionality for reviews based on their registration status.
+
+### Payments
+
+Payments are facilitated through Stripe, ensuring secure transactions.
+
+## About Page Overview
+The About page serves as the Home page or landing page. It's designed to welcome users with easy navigation and essential information. It includes a straightforward menu for moving around the site and a header that captures visitors' attention, setting the tone for the site's content and information about the business. The footer at the bottom of the page has space for extra details like contact information or useful links. 
+
+### Key Components of the main section:
+- **Hero Image:** Engages users with visually compelling content.
+- **Additional Site Information Section:** Invites users to register and provides a link to the signup page.
+
+## Headshots Page
+The Headshots page showcases Portrait photography packages. It provides a seamless user experience with intuitive navigation. Each product listing displays the package name, price, and rating, allowing visitors to evaluate the offerings quickly. The page layout reflects the business's professionalism and invites potential customers to explore further.
+
+The original plan included adding Portfolio photographs alongside the products for sale, but this feature was postponed due to time constraints and is suggested for future improvements.
+
+### Key Components of the main section:
+- **Product Display:** Offers details of the product range and a button for accessing detailed views.
+
+
+
+
+
 
 
 
 <!-- DEPLOYMENT -->
 
-
-## Deployment
+# Deployment
 
 Deployment facilitates the transition of your project from your local environment or IDE to publicly accessible hosting for others to access and enjoy. Below are the detailed steps you'll need to follow. These instructions assume you're using an IDE like VS Code or cloud based GitPod.
 
@@ -432,3 +527,13 @@ If you use gmail as your service provider for email then you will also need to s
     EMAIL_HOST_PASSWORD 
     DEFAULT_FROM_EMAIL
  
+### Setting up Stripe Payments on your deployed site
+
+1. Log in to Stripe, click on the developers tab and API keys copy the API key and set them in Heroku as config variables in the following:
+   - `STRIPE_PUBLIC_KEY`: Stripe publishable key goes here
+   - `STRIPE_SECRET_KEY`: Stripe secret key goes here
+
+2. Back in Stripe set up a new webhook for your deployed site by clicking on webhooks, click on 'add endpoint' and paste in your deployed site's URL setting it to listen for all events.
+
+3. Click on your newly set up webhook and click on 'Signing Secret' at the top to reveal the secret value. Copy it and set it as a new config variable in Heroku:
+   - `STRIPE_WH_SECRET`: Signing secret from new webhook.
