@@ -95,6 +95,42 @@ This methodology centred on developing essential features first, enabling flexib
 
 The details of the user stories and associated priority labels can be found in [Projects](https://github.com/users/AleksandrAtr/projects/2/views/3?filterQuery=-status%3A%22Awaiting+Review+%28Tasks+and+Spikes%29%22).
 
+## Minimally viable product (MVP) for the project submission
+
+#### Unregistered users
+- About page 
+- Headshots page: Display available-for-sale photography packages
+- Artsale page: Display available-for-sale fine art prints
+- Workshops page: Display available-for-sale workshop packages
+- Login page
+- Register page
+
+#### Registered users
+- All of the above
+- Blog page
+
+
+### Wireframes
+#### High level website design desktop - 
+<br>
+ 
+[Link]()
+<br>
+
+[Link]()
+<br>
+
+[Link]()
+<br>
+
+
+#### High-level website design for mobile - 
+![](static/images/home-m.png)
+<br>
+
+#### High-level webpage flow chart - 
+![](static/images/flow.png)
+<br>
 
 
 
