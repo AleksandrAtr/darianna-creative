@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import BlogPost
 
+
 def blog_post_list(request):
     """
     View function to display a list of blog posts.

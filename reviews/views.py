@@ -64,7 +64,6 @@ def add_review(request, product_id):
     return render(request, 'reviews/add_review.html', context)
 
 
-
 # Edit review view
 @login_required()  # Requires user authentication
 def edit_review(request, review_id):

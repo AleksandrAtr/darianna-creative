@@ -17,8 +17,7 @@ def workshop_products(request):
         
         # Render the template with the filtered products
         return render(request, 'workshops/workshops.html', context)
-    
+
     except Category.DoesNotExist:
         # Handle the case where the category does not exist
         raise Http404("The 'workshops' category does not exist.")
-
