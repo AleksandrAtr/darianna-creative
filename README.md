@@ -113,42 +113,36 @@ The details of the user stories and associated priority labels can be found in [
 
 
 ## Wireframes
-### High level website design desktop - 
+
+The wireframes were developed during the early stages of product development with the aim of establishing a consistent layout. This approach facilitates easy navigation for users while minimizing the learning curve.
+### High level website design desktop/mobile - 
 <br>
  
-![Link]()
+ ### Home page
+![Link](media/readme/w-home.jpg)
 <br>
 
-![Link]()
+### Headshots page
+![Link](media/readme/w-headshots.jpg)
 <br>
 
-![Link]()
-<br>
-![Link]()
-<br>
-![Link]()
-<br>
-![Link]()
-<br>
-![Link]()
-<br>
-![Link]()
+### Headshots product detail
+![Link](media/readme/w-head-detail.jpg)
 <br>
 
-
-### High-level website design for mobile - 
-![](static/images/home-m.png)
+### Artsale page
+![Link](media/readme/w-artsale.jpg)
 <br>
 
-### High-level webpage flow chart - 
-![](static/images/flow.png)
+### Artsale product detail
+![Link](media/readme/w-art-detail.jpg)
 <br>
 
 ## Database Schema
 
 During the planning phase, I developed a database schema to efficiently organize my data, aligning with the website's business goals and user stories. The schema underwent slight modifications during development. Below is the final version represented in the high-level database schema diagram.
 
-![High-level Database Schema](image)
+![High-level Database Schema](media/readme/database.png)
 
 ### Future Improvements
 
