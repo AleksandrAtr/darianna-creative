@@ -15,6 +15,7 @@
     * [User Stories](#user-stories)
     * [Agile development](#agile-development)
     * [Minimally viable product (MVP) for the project submission](#minimally-viable-product-mvp-for-the-project-submission)
+* [Project Planning](#)
 
 ## Project Planning
 
@@ -410,7 +411,8 @@ The Product Administration page is designed for superusers or administrators to 
 - **Temp Mail:** Used for testing account verification & order confirmation.
 
 
-<!-- DEPLOYMENT -->
+# Testing 
+[View Testing Documentation](TESTING.md)
 
 # Deployment
 
@@ -717,3 +719,37 @@ If you use gmail as your service provider for email then you will also need to s
 
 3. Click on your newly set up webhook and click on 'Signing Secret' at the top to reveal the secret value. Copy it and set it as a new config variable in Heroku:
    - `STRIPE_WH_SECRET`: Signing secret from new webhook.
+
+### Credits:
+**Content**
+- Icons were sourced from [Font Awesome](https://fontawesome.com)
+- My fonts were taken from [Google Fonts](https://fonts.google.com/)
+- [Bootstrap Version 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+- Wireframes were created using [Miro](https://miro.com/)
+- I used [favicon.io](https://favicon.io/) to generate my favicon for the site
+- [miniWebtool](https://miniwebtool.com/django-secret-key-generator//) was used to generate a new secret key for deployment.
+- Photos are taken from [kaggel](https://www.kaggle.com/)
+- Mockup generator [techsini]([kaggel](https://www.kaggle.com/))
+
+**Code**
+- CODE CREDITS goes to CODE INSITUTE Boutique Ado project where I reused and adopted some of the code.
+
+### Website development:
+During the project development, references were made to various online learning resources to get inspiration for the design and problems solving.  
+
+- I learned much of the material from the Code Code Institute Boutique Ado project. 
+- The HTML and CSS basics learn from the Code Institute education portal - https://learn.codeinstitute.net/dashboard
+- Items alignment in elements - https://www.w3.org/Style/Examples/007/center.en.html
+http://jsfiddle.net/a3nyexqg/
+- Object alignments and background-size - https://www.smashingmagazine.com/2021/10/object-fit-background-size-css/
+- The inspiration and principle understanding of the problems encountered during development was taken from the StackOverflow website. One of the problems encountered during the development was using multiple git accounts from the same computer - 
+
+### Personal appreciation:
+
+Thank you, Code Institute team, for your invaluable help and support throughout the course. Your efforts are greatly appreciated.
+
+I'm thankful to my mentor, Yulia Konovalova, for her invaluable guidance and support. Thank you, Yulia!
+
+I'm grateful to my wife, Margarita, for her support and feedback on the website's visuals, which made it more user-friendly and appealing. Thank you, Margarita! Love you!!!
+
+I'm grateful to my MOTHER, Galina, for providing mental support, beliefs and childcare for our children during development period - You're our Star!!! Love you!!!!

@@ -13,6 +13,7 @@
     - [CSS](#css)
     - [Javascript Validation](#javascript-validation)
     - [Python Validation](#python-validation)
+    - [Stripe validation](#Stripe-Validation)
   - [Lighthouse validations](#lighthouse-validations)
   - [Responsivness validations](#responsivness-validations)
   - [User Story Testing](#user-story-testing)
@@ -303,6 +304,14 @@ Manual testing has been undertaken for the Darianna Creative website. Below is t
 
 ### Some examples for test setup
 ![Link to the screenshots file](/media/readme/test/python.png)
+
+
+### Stripe Validation
+[ Stripe Webhooks](https://stripe.com/gb) has been used test Stripe connectivity and transaction. The website has no errors.
+<br>
+
+### Some examples for test setup
+![Link to the screenshots file](/media/readme/test/stripe.png)
 
 ## Lighthouse validations 
 Lighthouse testing across all pages reveals a common performance issue, primarily from the Largest Contentful Paint and unused javascript. While this impacts performance, it's currently deemed a low-priority concern. However, it's recommended that future improvement cycles review and optimize the form to enhance overall performance.
